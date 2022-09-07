@@ -1,0 +1,185 @@
+/* EXTERNAL */
+.colors {
+    color: hsl(300, 69%, 71%); /*Soft Magenta*/
+    color: hsl(257, 40%, 49%); /*Violet*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/*
+    font-family: 'Poppins', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*
+    font-family: 'Open Sans', sans-serif;
+*/
+
+/* GENERAL */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(257, 40%, 49%);
+    background-size: cover;
+}
+
+main {
+    width: 100vw;
+    min-height: 100vh;
+    background: url(images/bg-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+p, button {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+/* SPECIFY */
+header {
+    width: 100vw;
+    height: auto;
+}
+    header img {
+        width: 205px;
+        margin-left: 75px;
+        margin-top: 60px;
+        cursor: pointer;
+    }
+
+.principal {
+    display: grid;
+    grid-template-columns: 65% 45%;
+    margin-top: 100px;
+    padding: 0 80px;
+    width: 100vw;
+}
+    .principal img {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .principal .main-cont {
+        width: max-content;
+    }
+        .principal .main-cont h1 {
+            margin-top: 50px;
+            max-width: 400px;
+            font-size: 35px;
+        }
+            .principal .main-cont h1:last-of-type {
+                margin-top: 20px;
+            }
+        .principal .main-cont p {
+            margin-top: 40px;
+            margin-bottom: 25px;
+            max-width: 440px;
+        }
+        .principal .main-cont button {
+            width: 200px;
+            height: 55px;
+            border-radius: 50px;
+            border: none;
+            color: hsl(257, 40%, 49%);
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+            .principal .main-cont button:hover {
+                background: radial-gradient(hsl(300, 64%, 76%),hsl(257, 34%, 53%));
+                color: white;
+                transition: all .5s ease-in-out;
+            }
+footer {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    padding: 0 80px;
+}
+    footer i {
+        width: 42px;
+        height: 42px;
+        border: 2px solid white;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        padding-top: .6%;
+        color: white;
+        transition: .5s;
+        cursor: pointer;
+    }
+        footer i:hover {
+            border: 2px solid hsl(300, 64%, 76%);
+            color: hsl(300, 69%, 71%);
+            transform: translateY(-12px);
+            transition: .5s;
+        }
+@media (max-width:1155px) {
+    .principal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 100px;
+        padding: 0 80px;
+        width: 100vw;
+        gap: 40px;
+    }
+    footer {
+        height: 100px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 80px;
+    }
+}
+@media (max-width:1010px) {
+    main {
+        background: url(images/bg-mobile.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .principal {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
+@media (max-width:440px) {
+    .principal {
+        padding: 0;
+    }
+    .principal .main-cont p {
+        margin-top: 40px;
+        margin-bottom: 25px;
+        max-width: 300px;
+        position: relative;
+        right: -10%;
+    }
+}
